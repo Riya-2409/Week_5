@@ -28,8 +28,8 @@ public class ModifyCSVFileTestTest {
         for (String line : lines) {
             if (line.contains("IT")) {
                 String[] columns = line.split(",");
-                double salary = Double.parseDouble(columns[3]);
-                assertTrue(salary > 60000); // Previous IT salary was 60000
+                double salary = Double.parseDouble(columns[4]);
+                assertTrue(salary > 495000);
             }
         }
     }
@@ -37,7 +37,7 @@ public class ModifyCSVFileTestTest {
     private void createTestCSV() throws IOException {
         try (PrintWriter writer = new PrintWriter(new FileWriter(TEST_INPUT_CSV))) {
             writer.println("ID,Name,Department,Salary");
-            writer.println("1,Pragya,IT,45000");
+            writer.println("1,Pragya,IT,49500");
             writer.println("2,Sakshi,FINANCE,47000");
             writer.println("3,Unaiz,HR,60000");
             writer.println("4,Shubhi,TR,55000");
